@@ -63,11 +63,11 @@ function SlackWire({ start, mid, end, anchor, sub, v1 = new Vector3(), v2 = new 
   );
 }
 
-const InvisibleAnchor = forwardRef(({ position }, ref) => {
-  return (
-    <object3D position={position} ref={ref} />
-  )
-})
+// const InvisibleAnchor = forwardRef(({ position }, ref) => {
+//   return (
+//     <object3D position={position} ref={ref} />
+//   )
+// })
 
 function Mic() {
   const isDesktop = useMediaQuery('(min-width: 768px)');
