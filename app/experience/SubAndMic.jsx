@@ -3,31 +3,40 @@ import { useRef, forwardRef } from "react";
 import { Float, Cylinder, Sphere, QuadraticBezierLine, useScroll, Scroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
-import Sub from "./Sub";
+import Model from "./Model";
 
 export default function SubAndMic() {
   const isDesktop = useMediaQuery('(min-width: 768px)');
   const subRef = useRef();
   const anchorRef = useRef();
- 
+  // <Model
+  //   model="Coral_026"
+  //   scale={1}
+  //   position={isDesktop ? [-4.9, 6.8, -1.3] : [-2.9, 6.8, -1.3]}
+  //   rotation={[1, -3, 0]}
+  // />
+
+
   return (
     <>
       <Float>
-      <Scroll>
-        <Sub
-          ref={subRef}
-          position={isDesktop ? [10, 15, -10] : [3, 15, -10]}
-        />
+        <Scroll>
+
+          <Model
+            model="Water_Ship_001"
+            scale={1}
+            position={isDesktop ? [10, 15, -10] : [3, 15, -10]}
+          />
         </Scroll>
       </Float>
       <Scroll>
-      <Mic />
+        <Mic />
       </Scroll>
     </>
   )
 }
 
-function SlackWire({ start, mid, end, anchor, sub,v1 = new Vector3() ,v2 = new Vector3() }) {
+function SlackWire({ start, mid, end, anchor, sub, v1 = new Vector3(), v2 = new Vector3() }) {
   const ref = useRef()
   const scrollData = useScroll()
   useFrame(() => {
@@ -54,9 +63,9 @@ function SlackWire({ start, mid, end, anchor, sub,v1 = new Vector3() ,v2 = new V
   );
 }
 
-const InvisibleAnchor = forwardRef(({position}, ref)=>{
+const InvisibleAnchor = forwardRef(({ position }, ref) => {
   return (
-    <object3D position={position} ref={ref}/>
+    <object3D position={position} ref={ref} />
   )
 })
 
