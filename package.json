@@ -23,6 +23,7 @@
     "@react-hook/media-query": "^1.1.1",
     "@react-three/drei": "^9.65.3",
     "@react-three/fiber": "^8.12.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "glsl-random": "^0.0.5",
     "next": "^13.3.0",
     "react": "^18.2.0",

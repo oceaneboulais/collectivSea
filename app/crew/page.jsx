@@ -12,7 +12,7 @@ const people = [
   },
   {
     name: 'Lorea Dandoy',
-    role: 'Navigator',
+    role: 'First Mate',
     imageUrl:
       './crew/lorea.JPG',
     bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
@@ -21,7 +21,7 @@ const people = [
   },
   {
     name: 'Niv Anidjar',
-    role: 'Navigator',
+    role: 'Chief engineer',
     imageUrl:
       './crew/niv.JPG',
     bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
@@ -54,7 +54,7 @@ export default function Page() {
           </div>
           <ul
             role="list"
-            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
+            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none bg-white p-8 rounded"
           >
             {people.map((person) => (
               <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
