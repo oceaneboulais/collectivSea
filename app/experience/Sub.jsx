@@ -17,6 +17,8 @@ const Sub = forwardRef((props, ref) => {
   );
 });
 
+Sub.displayName = 'Sub'; // Add this line to set the display name
+
 export default Sub;
 
 useGLTF.preload('/Water_Ship_001.glb');
