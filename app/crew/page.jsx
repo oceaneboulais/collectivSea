@@ -1,40 +1,76 @@
 'use client'
 
-import dynamic from 'next/dynamic'
+const people = [
+  {
+    name: 'Océane Boulais',
+    role: 'Navigator',
+    imageUrl:
+      './crew/oceane.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'Lorea Dandoy',
+    role: 'Navigator',
+    imageUrl:
+      './crew/lorea.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'Niv Anidjar',
+    role: 'Navigator',
+    imageUrl:
+      './crew/niv.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'JP Whitaker',
+    role: 'Stowaway',
+    imageUrl:
+      './crew/jp.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
 
-const Blob = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Blob), { ssr: false })
-const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
-  ssr: false,
-  loading: () => (
-    <div className='flex h-96 w-full flex-col items-center justify-center'>
-      <svg className='-ml-1 mr-3 h-5 w-5 animate-spin text-black' fill='none' viewBox='0 0 24 24'>
-        <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
-        <path
-          className='opacity-75'
-          fill='currentColor'
-          d='M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
-        />
-      </svg>
-    </div>
-  ),
-})
-const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
+]
 
 export default function Page() {
   return (
     <>
-      <div className='mx-auto flex w-full flex-col flex-wrap items-center md:flex-row  lg:w-4/5'>
-        <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'>
-          <p className='w-full uppercase'>Next + React Three Fiber</p>
-          <h1 className='my-4 text-5xl font-bold leading-tight'>Crew</h1>
-          <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
+      <div className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our crew</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
+              best results for our clients.
+            </p>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
+          >
+            {people.map((person) => (
+              <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
+                <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={person.imageUrl} alt="" />
+                <div className="flex-auto">
+                  <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
+                  <p className="text-base leading-7 text-gray-600">{person.role}</p>
+                  <p className="mt-6 text-base leading-7 text-gray-600">{person.bio}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
-        <Blob />
-        <Common />
-      </View>
+
     </>
   )
 }
