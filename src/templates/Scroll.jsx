@@ -65,7 +65,7 @@ export default function Scroll({ children }) {
         }}>
         {children}
       </div>
-    </div>
+    </div >
   )
 }
 

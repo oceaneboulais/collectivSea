@@ -33,7 +33,7 @@ export default function Experience() {
           <FarObjects />
           {/* <AboutTextFlex /> */}
           <Sand />
-          <Html position={[0, 14, 1]} wrapperClass="w-full">
+          <Html position={[0, 14, 1]} wrapperClass="w-full" style={{ pointerEvents: "none" }}>
             <div
               style={{
                 transform: 'translateX(-50vw)',
@@ -99,6 +99,7 @@ const Polypod = function () {
             <a
               href="/polypod"
               className="rounded-md bg-amber-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              style={{ pointerEvents: "auto" }}
             >
               Learn More <span aria-hidden="true">→</span>
             </a>
@@ -168,6 +169,7 @@ const Crew = function () {
           <a
             href="/crew"
             className="mt-6 rounded-md bg-amber-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            style={{ pointerEvents: "auto" }}
           >
             Meet the crew <span aria-hidden="true">→</span>
           </a>
