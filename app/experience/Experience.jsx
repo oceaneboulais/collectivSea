@@ -62,7 +62,7 @@ export default function Experience() {
                 ></span>
                 {"CollectivSea"}
               </span>
-              {" is an immersive art collective reimagining science education through interactive experiences."}
+              {" is an art collective creating a  playborhood for blue-minded artists, scientists, researchers & designers to share the story of our undiscovered blue planet."}
             </div>
           </Html>
         </Scroll>

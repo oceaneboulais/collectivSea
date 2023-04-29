@@ -15,7 +15,7 @@ export default function Page() {
 
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
-              <div className="bg-white px-8 py-6 rounded">
+              <div className="bg-white px-8 py-6 rounded-2xl">
                 <div className="lg:pr-4 ">
                   <div className="lg:max-w-lg bg-white mb-6 rounded">
                     {/* <p className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</p> */}
@@ -87,7 +87,7 @@ export default function Page() {
 
                   </ul>
                   <img
-                    className="mx-auto mt-8 mb-2 h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
+                    className="mx-auto mt-8 mb-2 h-96 w-full flex-none rounded-xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
 
                     src="./polypod/polypod-external.jpeg"
                     alt=""

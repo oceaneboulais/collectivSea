@@ -1,0 +1,59 @@
+diff --git a/node_modules/@react-three/drei/web/Html.js b/node_modules/@react-three/drei/web/Html.js
+index 2e0e5df..9a83a45 100644
+--- a/node_modules/@react-three/drei/web/Html.js
++++ b/node_modules/@react-three/drei/web/Html.js
+@@ -134,7 +134,7 @@ const Html = /*#__PURE__*/React.forwardRef(({
+   const transformOuterRef = React.useRef(null);
+   const transformInnerRef = React.useRef(null); // Append to the connected element, which makes HTML work with views
+ 
+-  const target = (portal == null ? void 0 : portal.current) || events.connected || gl.domElement.parentNode;
++  const target = (portal == null ? void 0 : portal.current) || gl.domElement.parentNode;
+   const occlusionMeshRef = React.useRef(null);
+   const isMeshSizeSet = React.useRef(false);
+   const isRayCastOcclusion = React.useMemo(() => {
+@@ -166,7 +166,7 @@ const Html = /*#__PURE__*/React.forwardRef(({
+       }
+ 
+       if (target) {
+-        if (prepend) target.prepend(el);else target.appendChild(el);
++        if (prepend) target.prepend(el); else target.appendChild(el);
+       }
+ 
+       return () => {
+@@ -265,12 +265,12 @@ const Html = /*#__PURE__*/React.forwardRef(({
+         }
+ 
+         if (previouslyVisible !== visible.current) {
+-          if (onOcclude) onOcclude(!visible.current);else el.style.display = visible.current ? 'block' : 'none';
++          if (onOcclude) onOcclude(!visible.current); else el.style.display = visible.current ? 'block' : 'none';
+         }
+ 
+         const halfRange = Math.floor(zIndexRange[0] / 2);
+         const zRange = occlude ? isRayCastOcclusion //
+-        ? [zIndexRange[0], halfRange] : [halfRange - 1, 0] : zIndexRange;
++          ? [zIndexRange[0], halfRange] : [halfRange - 1, 0] : zIndexRange;
+         el.style.zIndex = `${objectZIndex(group.current, camera, zRange)}`;
+ 
+         if (transform) {
+@@ -358,8 +358,8 @@ const Html = /*#__PURE__*/React.forwardRef(({
+   });
+   const shaders = React.useMemo(() => ({
+     vertexShader: !transform ?
+-    /* glsl */
+-    `
++      /* glsl */
++      `
+           /*
+             This shader is from the THREE's SpriteMaterial.
+             We need to turn the backing plane into a Sprite
+@@ -394,8 +394,8 @@ const Html = /*#__PURE__*/React.forwardRef(({
+           }
+       ` : undefined,
+     fragmentShader:
+-    /* glsl */
+-    `
++      /* glsl */
++      `
+         void main() {
+           gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
+         }

@@ -14,7 +14,8 @@
     "dev": "next dev",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
-    "start": "next start"
+    "start": "next start",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^8.2.0",
@@ -26,6 +27,8 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "glsl-random": "^0.0.5",
     "next": "^13.3.0",
+    "patch-package": "^7.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.151.3",

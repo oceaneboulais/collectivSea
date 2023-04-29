@@ -23,18 +23,47 @@ const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mo
 export default function Page() {
   return (
     <>
-      <div className='mx-auto flex w-full flex-col flex-wrap items-center md:flex-row  lg:w-4/5'>
-        <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'>
-          <p className='w-full uppercase'>Next + React Three Fiber</p>
-          <h1 className='my-4 text-5xl font-bold leading-tight'>Mission</h1>
-          <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
-        </div>
-      </div>
-
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
-        <Blob />
-        <Common />
-      </View>
+      <Mission />
     </>
+  )
+}
+
+
+const Mission = function () {
+
+  return (
+    <div className="">
+
+      <div className="relative isolate overflow-hidden  from-indigo-100/20 pt-14">
+
+        <div className="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+            <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-white sm:text-6xl lg:col-span-2 xl:col-auto">
+              Our Mission
+            </h1>
+            <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+              <p className="text-lg leading-8 text-white">
+                Create immersive experiences for humans to emotionally connect to our oceans
+
+                Expand our blue-mind understanding, making marine science more accessible through playful exploration and discovery
+
+              </p>
+              <div className="mt-10 flex items-center gap-x-6">
+
+                <a href="mailto:oboulais@ucsd.edu" className="text-sm font-semibold leading-6 text-white">
+                  Contact <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+            <img
+              src="./mission/aquarium.jpeg"
+              alt=""
+              className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
   )
 }
