@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic'
 import { CubeTransparentIcon, SpeakerWaveIcon, CpuChipIcon, SunIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 
 
@@ -86,11 +87,13 @@ export default function Page() {
                     </li>
 
                   </ul>
-                  <img
+                  <Image
                     className="mx-auto mt-8 mb-2 h-96 w-full flex-none rounded-xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm"
-
-                    src="./polypod/polypod-external.jpeg"
+                    priority
+                    src="/polypod/polypod-external.jpeg"
                     alt=""
+                    width={2048}
+                    height={2732}
                   />
                 </div>
               </div>
