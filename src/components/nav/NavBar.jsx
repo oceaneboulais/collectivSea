@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 const navigation = [
-  { name: 'Polypod', href: '/polyppod', current: true },
+  { name: 'Polypod', href: '/polypod', current: true },
   { name: 'Crew', href: '/crew', current: false },
   { name: 'Mission', href: '/mission', current: false },
 ]
