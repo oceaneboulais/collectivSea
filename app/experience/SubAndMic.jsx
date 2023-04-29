@@ -29,9 +29,9 @@ export default function SubAndMic() {
           />
         </Scroll>
       </Float>
-      <Scroll>
+      {/* <Scroll>
         <Mic />
-      </Scroll>
+      </Scroll> */}
     </>
   )
 }

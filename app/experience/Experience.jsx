@@ -7,6 +7,15 @@ import Sand from './Sand'
 import SubAndMic from './SubAndMic'
 import { useThree } from '@react-three/fiber'
 import Image from 'next/image'
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '/tailwind.config.js'
+
+const fullConfig = resolveConfig(tailwindConfig)
+const maxWidth = fullConfig.theme.screens.xl
+const translateXValue = `calc(max-w-screen-xl / 2)`
+// debugger
+console.log(translateXValue)
+
 export default function Experience() {
   const { viewport, camera } = useThree();
   return (
@@ -36,9 +45,9 @@ export default function Experience() {
           <Html position={[0, 14, 1]} wrapperClass="w-full" style={{ pointerEvents: "none" }}>
             <div
               style={{
-                transform: 'translateX(-50vw)',
+                transform: `translateX(calc(-${maxWidth} / 2))`,
               }}
-              className="text-white text-opacity-90 text-6xl w-3/5 mx-auto"
+              className="text-white text-opacity-90 text-6xl  max-w-screen-xl mx-auto"
             >
               <span
                 style={{
