@@ -6,7 +6,7 @@ import FarObjects from './FarObjects'
 import Sand from './Sand'
 import SubAndMic from './SubAndMic'
 import { useThree } from '@react-three/fiber'
-
+import Image from 'next/image'
 export default function Experience() {
   const { viewport, camera } = useThree();
   return (
@@ -63,7 +63,14 @@ export default function Experience() {
                 {"CollectivSea"}
               </span>
               {" is an art collective creating a  playborhood for blue-minded artists, scientists, researchers & designers to share the story of our undiscovered blue planet."}
+              <Image src="/loopy-arrow2.svg" width={110} height={400} className="mx-auto py-20" />
+              <Polypod />
+              <Image src="/loopy-arrow4.svg" width={250} height={0} className="mx-auto py-20" />
+              <Crew />
             </div>
+
+
+
           </Html>
         </Scroll>
 
@@ -72,6 +79,101 @@ export default function Experience() {
       </ScrollControls>
 
     </Suspense>
+  )
+}
+
+const Polypod = function () {
+  return (
+    <div className="">
+      <div className="px-6 py-4 sm:px-6 sm:py-12 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Polypod
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white">
+            Our first interactive art experience.  Enter and become a coral polyp
+            and find yourself surrounded by coral-generating frequencies.
+
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="/polypod"
+              className="rounded-md bg-amber-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Learn More <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+const people = [
+  {
+    name: 'Océane Boulais',
+    role: 'Navigator',
+    imageUrl:
+      './crew/oceane.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'Lorea Dandoy',
+    role: 'First Mate',
+    imageUrl:
+      './crew/lorea.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'Niv Anidjar',
+    role: 'Chief engineer',
+    imageUrl:
+      './crew/niv.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'JP Whitaker',
+    role: 'Stowaway',
+    imageUrl:
+      './crew/jp.JPG',
+    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+
+]
+const Crew = function () {
+  return (
+    <div className="py-2 sm:py-2 flex justify-center">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="flex flex-col items-end"> {/* Add a wrapper div */}
+          <ul
+            role="list"
+            className="mx-auto grid max-w-xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-4 md:grid-cols-4 lg:mx-0 lg:max-w-xl lg:grid-cols-5 xl:grid-cols-4"
+          >
+            {people.map((person) => (
+              <li key={person.name}>
+                <img className="mx-auto h-24 w-24 object-cover rounded-full" src={person.imageUrl} alt="" />
+                <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{person.name}</h3>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="/crew"
+            className="mt-6 rounded-md bg-amber-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Meet the crew <span aria-hidden="true">→</span>
+          </a>
+        </div> {/* Close the wrapper div */}
+      </div>
+    </div>
   )
 }
 
