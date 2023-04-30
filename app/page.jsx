@@ -10,10 +10,10 @@ import { StrictMode } from 'react'
 export default function Page() {
   return (
     <StrictMode>
-      <Canvas shadows camera={{ position: [0, 13, 7], fov: 50 }}>
+      <Canvas shadows camera={{ position: [0, 13, 7], fov: 50 }} className={'canvas'} >
         <ExperienceShort />
       </Canvas>
-    </StrictMode>
+    </StrictMode >
 
   )
 }

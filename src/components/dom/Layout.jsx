@@ -20,20 +20,22 @@ const Layout = ({ children }) => {
       }}
     >
       <NavBar />
+
       {children}
-      <Scene
+
+      {/* <Scene
         style={{
           position: 'fixed',
           top: 0,
           left: 0,
           width: '100vw',
-          height: '100vh',
+          height: 'calc(100vh-4rem)',
           pointerEvents: 'none',
         }}
         eventSource={ref}
         eventPrefix='client'
-      />
-    </div>
+      /> */}
+    </div >
   )
 }
 
