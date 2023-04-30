@@ -79,7 +79,7 @@ export function NavBar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2 bg-[#0fa2ab] drop-shadow-lg bg-transparent	">
+            <div className="space-y-1 px-2 pb-3 pt-2 drop-shadow-lg bg-transparent	">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
