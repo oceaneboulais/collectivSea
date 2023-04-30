@@ -17,7 +17,7 @@ const translateXValue = `calc(max-w-screen-xl / 2)`
 console.log(translateXValue)
 
 export default function Experience() {
-  const { viewport, camera } = useThree();
+
   return (
     <Suspense>
       <PerspectiveCamera makeDefault position={[0, 13, 7]} />
