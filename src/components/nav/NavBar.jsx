@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link';
 import { Fragment } from 'react'
+import { usePathname } from 'next/navigation';
 
 
 
@@ -16,18 +17,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const inlineStyles = {
-  zIndex: 1,
-  // // WebkitBackdropFilter: 'blur(10px) saturate(160%) contrast(45%) brightness(120%)',
-  // backdropFilter: 'blur(2px) saturate(100%) contrast(100%) brightness(100%)',
-  // // backgroundColor: 'rgba(255, 255, 255, 0.2)',
-
-  // transition: 'all 0.5s ease-in-out',
-};
-
-
 
 export function NavBar() {
+  const pathName = usePathname()
+
   return (
     <Disclosure as="nav" className="z-[999] absolute w-full">
       {({ open }) => (
@@ -43,10 +36,9 @@ export function NavBar() {
                     {navigation.map((item) => (
                       <Link href={item.href}
                         key={item.href}
-                        className={classNames(
-                          'text-gray-300  hover:text-white hover:cursor-pointer',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
+                        className={
+                          classNames((item.href == pathName) ? 'text-white' : 'text-gray-300', 'hover:text-white hover:cursor-pointer rounded-md px-3 py-2 text-sm font-medium')
+                        }
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -86,7 +78,7 @@ export function NavBar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-amber-400 text-white' : 'text-gray-900 bg-white hover:bg-gray-700 hover:text-white',
+                    (item.href == pathName) ? 'bg-amber-400 text-white' : 'text-gray-900 bg-white hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
