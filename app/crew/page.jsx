@@ -74,16 +74,15 @@ export default function Page() {
           </div>
           <ul
             role="list"
-            className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none bg-white p-8 rounded-2xl"
+            className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2 bg-white p-8 rounded-2xl mt-16"
           >
             {people.map((person) => (
-              <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
-                <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover max-h-72" src={person.imageUrl} alt="" />
-                <div className="flex-auto">
-                  <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
-                  <p className="text-base leading-7 text-gray-600">{person.role}</p>
-                  <p className="mt-6 text-base leading-7 text-gray-600">{person.bio}</p>
-                </div>
+              <li key={person.name}>
+                <img className="aspect-[14/13] w-1/2 rounded-2xl object-cover" src={person.imageUrl} alt="" />
+                <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
+                <p className="text-base leading-7 text-gray-600">{person.role}</p>
+                <p className="mt-4 text-base leading-7 text-gray-600">{person.bio}</p>
+
               </li>
             ))}
           </ul>
