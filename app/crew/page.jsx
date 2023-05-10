@@ -17,7 +17,7 @@ const people = [
   },
   {
     name: 'Lorea Dandoy',
-    role: 'First Mate',
+    role: 'First Mate & Co-Founder',
     imageUrl:
       './crew/lorea.JPG',
     bio: `While our Captain looks to the skies at our North Star, Lorea keeps an eye on the horizon and tradewinds to ensure smooth sailing. She balances storytelling and strategy to dream up experiences that elevate science communication to new realms.
@@ -31,7 +31,7 @@ Lorea feels most in tune with the ocean when fully submerged, through scuba and 
   },
   {
     name: 'Niv Anidjar',
-    role: 'Chief engineer',
+    role: 'Acoustic Engineer & Co-Founder',
     imageUrl:
       './crew/niv.JPG',
     bio: `Niv is the creative splash behind the acoustic experiences at CollectivSea. Always on the hunt for found sound, they’re constantly listening for ways to link their thirst for frequencies with scientific expertise. Through their research, they investigate the complex interactions between these physical processes and the ecosystems they affect.
@@ -45,7 +45,7 @@ When not immersed in research or music, Niv can often be found watching the suns
   },
   {
     name: 'JP Whitaker',
-    role: 'Stowaway',
+    role: '3D Web Engineer & Co-Founder',
     imageUrl:
       './crew/jp.JPG',
     bio: `JP is a whimsical web generator and polygon mage who loves telling stories anchored in education through screen-sized portals that connect humans to one another. 
