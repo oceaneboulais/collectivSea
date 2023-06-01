@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Polyp Pod', href: '/polyppod', current: true },
   { name: 'Crew', href: '/crew', current: false },
   { name: 'Mission', href: '/mission', current: false },
+  { name: 'Updates', href: '/updates', current: false },
 ]
 
 function classNames(...classes) {
