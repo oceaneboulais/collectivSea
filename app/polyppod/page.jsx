@@ -101,7 +101,7 @@ export default function Page() {
           </div>
           <div className="mt-12 lg:-ml-12 lg:-mt-12 lg:p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
             <img
-              className="w-[48rem] max-w-none rounded-xl   ring-1 ring-gray-400/10 sm:w-full lg:w-[57rem]"
+              className="w-[48rem] max-w-full rounded-xl   ring-1 ring-gray-400/10 sm:w-full lg:w-[57rem]"
               src="./polypod/diagram-white-cropped.png"
               alt=""
             />
