@@ -30,7 +30,7 @@ const posts = [
     href: '#',
     description:
       <>
-        Catherine and George made progress on how the structure can be fabricated, assembled, and what materials we'll be using.
+        Catherine and George made progress on how the structure can be fabricated, assembled, and what materials we&apos;ll be using.
 
 
         <img
@@ -108,7 +108,7 @@ const posts = [
     href: '#',
     description:
       <>
-        Audio brainstorm re: acoustic installation with Niv & Gabe (our Birch Aquarium facilitator/collaborator).
+        Audio brainstorm re: acoustic installation with Océane, Niv & Gabe (our Birch Aquarium facilitator/collaborator).
 
         <img
           className="w-full  rounded-xl mt-12"
@@ -148,7 +148,7 @@ export default function Page() {
     <div className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ship's Log</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ship&apos;s Log</h2>
           <p className="mt-2 text-lg leading-8 text-slate-800">
             Updates from the team.
           </p>
