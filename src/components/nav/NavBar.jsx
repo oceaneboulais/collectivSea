@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 
 
 const navigation = [
-  { name: 'Polypod', href: '/polypod', current: true },
+  { name: 'Polyp Pod', href: '/polyppod', current: true },
   { name: 'Crew', href: '/crew', current: false },
   { name: 'Mission', href: '/mission', current: false },
 ]
