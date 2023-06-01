@@ -173,7 +173,7 @@ export default function Page() {
                       {post.title}
                     </div>
                   </h3>
-                  <p className="mt-5 line-clamp-3 text-md leading-6 text-slate-800">{post.description}</p>
+                  <p className="mt-5 text-md leading-6 text-slate-800">{post.description}</p>
                 </div>
 
               </article>
