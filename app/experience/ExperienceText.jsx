@@ -32,9 +32,6 @@ export const ExperienceText = function () {
   )
 }
 
-// style = {{
-//   transform: `translateX(calc(-${maxWidth} / 2))`,
-//         }}
 
 const Highlight = function () {
   return (
