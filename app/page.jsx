@@ -229,7 +229,7 @@ export const ExperienceText = function () {
         <Highlight />
         {"CollectivSea"}
       </span>
-      {" is an art collective creating a  playborhood for blue-minded artists, scientists, researchers & designers to share the story of our undiscovered blue planet."}
+      {" is an immersive SciArt education 501c3 nonprofit organization fueling curiousity world wide and collectiv of thalassophilic scientists, artists, researchers and designers massively stoked to share the story of our undiscovered blue planet."}
 
 
     </div>
