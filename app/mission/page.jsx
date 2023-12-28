@@ -50,7 +50,7 @@ const Mission = function () {
               </p>
               <div className="mt-10 flex items-center gap-x-6">
 
-                <a href="mailto:oboulais@ucsd.edu" className="text-sm font-semibold leading-6 text-white">
+                <a href="mailto:collectivsea@gmail.com" className="text-sm font-semibold leading-6 text-white">
                   Contact <span aria-hidden="true">→</span>
                 </a>
               </div>
