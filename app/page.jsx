@@ -167,10 +167,10 @@ export default function Page() {
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
-                    href="https://www.kickstarter.com/projects/collectivsea/the-coral-polyp-pod"
+                    href="https://ko-fi.com/collectivsea"
                     className="rounded-md bg-amber-400 px-5 py-4 text-lg font-semibold text-slate-800 shadow-sm hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Learn more on Kickstarter <span aria-hidden="true">→</span>
+                    Support the Polyp(POD) & Learn More<span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>
