@@ -163,7 +163,7 @@ export default function Page() {
               <div className="mx-auto  text-center mt-16 ">
 
                 <p className="text-2xl sm:text-4xl text-white font-light	">
-                  Our first project the &quot;Polyp Pod&quot;, an immersive, interactive sci-art exhibit invites explorers to walk inside and become a coral polyp within a dynamic reef ecosystem
+                  Our first project the Polyp(POD) is an immersive, interactive sci-art exhibit invites explorers to walk inside and become a coral polyp within a dynamic reef ecosystem
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
